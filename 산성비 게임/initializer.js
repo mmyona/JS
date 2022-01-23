@@ -1,4 +1,4 @@
-const ordsw = ['Codeit', 'JavaScript', 'DOM', 'document', 'window', 'Event', 'Bubbling', 'Delegation'];
+const words = ['Codeit', 'JavaScript', 'DOM', 'document', 'window', 'Event', 'Bubbling', 'Delegation'];
 const container = document.querySelector('#container');
 
 //랜덤 함수
@@ -10,7 +10,7 @@ function getRandomInt(minimum, maximum) {
     ex)
     Math.ceil(9.5); -> 리턴값 : 10
     Math.ceil(.95); -> 리턴값 : 1
-    
+
     Math.floor()는 그 반대의 역할을 하는 함수
     */
     return Math.floor(Math.random() * (max - min)) + min; 
