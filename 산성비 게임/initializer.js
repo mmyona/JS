@@ -45,3 +45,23 @@ clientWidth, clientHeight
   }
   
   init();
+
+  /*
+  단어들을 만드는 로직은 initializer.js에 있다. 
+  각 단어가 만들어진 특징을 정리해보면 다음과 같다.
+
+1. 각 단어들은 span 태그로 만들어져 있다.
+const span = document.createElement('span');
+
+2. 각 단어들은 웹 페이지가 갱신될 때마다 랜덤한 위치를 가진다.
+span.style.top = `${getRandomInt(20, maxPositionY)}px`;
+span.style.left = `${getRandomInt(20, maxPositionX)}px`;
+
+3. 각 단어들은 data-word라는 속성을 가지고 값은 그 단어를 담고 있다.
+span.classList.add('word');
+ span.dataset.word = word;
+
+4. 각 단어들은 div#container 태그의 자식 태그들이다.
+container.append(span);
+
+*/
