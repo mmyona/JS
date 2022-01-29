@@ -51,3 +51,30 @@ function ignoreFirst(...args){
 
   const argss={...args};
   //이렇게 하면 -> spread로 펼쳐진 값들로 구성된 '객체'가 만들어짐
+
+//* 주의 사항
+//Spread 구문을 사용해서 새로운 배열을 만든다거나 함수의 아규먼트로 사용할 수는 없다.
+//그렇기 때문에 객체를 spread할 때는 반드시 객체를 표현하는 중괄호 안에서 활용해야 한다는 점
+
+
+//spread 실습
+const snacks = ['원카칩', '꿀버터칩', '헛스윙칩', '태양칩', '야채시간'];
+const drinks = ['사이다', '콜라', '우유', '물', '커피', '레몬에이드'];
+
+function printArguments(...args) {
+  for (const arg of args) {
+    console.log(arg);
+  }
+}
+// 1. Spread 구문을 활용해서 sancks와 drinks 배열을 각각 mySnacks와 myDrinks 변수에 복사해 주세요.
+const mySnacks = [...snacks];
+const myDrinks = [...drinks];
+
+mySnacks.splice(2, 3);
+myDrinks.splice(1);
+
+// 2. Spread 구문을 활용해서 mySnacks와 myDrinks 순서로 두 배열을 합쳐서 myChoice 변수에 할당해 주세요.
+const myChoice = [...mySnacks, ...myDrinks];
+
+// 3. Spread 구문을 활용해서 myChoice의 각 요소들을 printArguments 함수의 아규먼트로 전달해 주세요.
+printArguments(...myChoice);
