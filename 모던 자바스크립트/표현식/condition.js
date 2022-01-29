@@ -17,6 +17,8 @@ console.log(check(85));
 
 //spread 구문
 //: 배열을 다룰 때 유용하다. 배열을 각각의 값으로 펼치는 기능
+//1개 값 -> 여러개 값으로 펼침
+//그래서 여러 값의 '목록'으로 평가된다.
 const num=[1,2,3];
 console.log(... num);
 console.log(1,2,3);
@@ -24,3 +26,28 @@ console.log(1,2,3);
 
 // rest parameter와 비슷한 형태
 //근데 rest는 묶는 역할, spread는 펼치는 역할
+
+//spread를 argument로 활용 가능
+function ignoreFirst(...args){
+    const newArgs=args.slice(1);
+    for(const arg of newArgs){
+      console.log(arg);
+    }
+  };
+  
+  function ignoreFirst(...args){
+    const newArgs=args.slice(1);
+    for(const arg of newArgs){
+      console.log(arg);
+    }
+  };
+  
+  const args=['1세대', '2세대', '3세대'];
+  ignoreFirst(...args);
+  //args라는 배열의 값을 펼쳐서 함수로 전달해줌
+  
+  //spread값 -> 여러 값의 목록 O, 하나의 값 X
+  // -> 하나의 값을 펼칠 수는 없음.
+
+  const argss={...args};
+  //이렇게 하면 -> spread로 펼쳐진 값들로 구성된 '객체'가 만들어짐
