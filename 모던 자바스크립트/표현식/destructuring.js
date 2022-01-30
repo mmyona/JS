@@ -106,3 +106,8 @@ console.log(rest);
 printMenu(menu1);
 printMenu(menu2);
 printMenu(menu3);
+
+
+
+//destructuring과 함수
+//parameter 부분에서 바로 destructuring 활용 가능
