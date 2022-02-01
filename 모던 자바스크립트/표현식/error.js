@@ -23,7 +23,7 @@ try{
     console.log('에러 전');
     throw error;
     console.log('에러 발생!'); //이건 동작하지 않음
-} catch(error){
+} catch(error){ //try문에서 발생한 에러가 (error) -> catch문의 첫 번째 파라미터로 전달된다
     console.log('끝! 에러 후');
     console.error(error);
     console.log(error.name);
