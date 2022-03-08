@@ -30,6 +30,7 @@ let ipad='임현아';
 
 console.log(iphone, ipad);
 
+//swap 함수 역할
 [iphone,ipad]=[ipad,iphone]; //이렇게 해주면 두 변수의 값 서로 교환 가능
 
 console.log(iphone, ipad); 

@@ -43,3 +43,47 @@ const newArr=arr.map((arr,i)=>{
 console.log(newArr);
 
 //forEach, map 메소드는 배열의 요소 개수(배열의 길이)만큼 반복됨
+
+//실습 과제
+const quiz = ['YUMMY', 'COUNT', 'ABUSE', 'SOUND', 'SWING'];
+
+// 여기에 코드를 작성해 주세요.
+const answer = quiz.map((word, i) => {
+  return word[i];
+});
+
+// 테스트 코드
+console.log(answer);
+
+
+//filter/find 메소드
+
+const devices=[
+    {name:'galaxy', brand:'a'},
+    {name:'galaxy', brand:'b'},
+    {name:'apple',brand:'b'},
+    {name:'apple',brand:'a'},
+];
+
+const result=devices.filter((el)=>el.brand==='a');
+
+console.log(result);
+//조건문을 이용해 조건에 맞는 배열을 필터링
+//리턴값이 "배열"
+//그래서 아래와 같이 spread 구문을 써서 출력해줘야 요소로 출력 가능
+console.log(...result);
+
+//find 메소드는 filter과 동일한데, 리턴값이 "값"
+const result2=devices.find((el)=>el.name==='apple');
+console.log(result2);
+//그리고, find는 조건에 맞는 값 단 1개만을 찾음.
+//그래서 -> 값을 찾는 순간 반복을 멈춤. 더 앞 인덱스에 있는 값을 리턴하게 된다.
+//그치만, filter는 조건에 맞는 값을 모두 찾기 때문에
+// -> 반복을 더 많이 할 수 있음.
+
+const result3=devices.find((el,i)=>{
+    console.log(i);
+    return el.name==='apple';
+});
+
+console.log(result3);
