@@ -35,13 +35,6 @@ function ignoreFirst(...args){
     }
   };
   
-  function ignoreFirst(...args){
-    const newArgs=args.slice(1);
-    for(const arg of newArgs){
-      console.log(arg);
-    }
-  };
-  
   const args=['1세대', '2세대', '3세대'];
   ignoreFirst(...args);
   //args라는 배열의 값을 펼쳐서 함수로 전달해줌
