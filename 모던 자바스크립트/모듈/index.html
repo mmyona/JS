@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>오늘 뭐 먹지?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="circle1"></div>
+  <div class="circle2"></div>
+  <div class="main">
+    <div class="container">
+      <h2 class="title">오늘 뭐 먹지?</h2>
+      <div class="add-column">
+        <input class="add-input" type="text">
+        <button class="add-btn">Add</button>
+      </div>
+    </div>
+    <ul class="list"></ul>
+    <button class="roll-btn">Roll</button>
+  </div>
+  <script type="module" src="index.js"></script>
+</body>
+</html>
+  <!--module scope 설정을 위해 type 설정을 해줘야 함
+  html파일에서는 여러 js 파일 중 진입점에 해당하는 파일 하나만
+불러오는 경우가 많음.
+js파일들끼리는 서로 서로 export와 import로 연결되어 있으므로-->

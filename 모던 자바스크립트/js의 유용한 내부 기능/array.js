@@ -87,3 +87,58 @@ const result3=devices.find((el,i)=>{
 });
 
 console.log(result3);
+
+const nums=[1,2,3,4,5];
+
+//some 메소드
+// : 조건을 만족하는 요소가 1개 이상 있는지 -> true/false
+console.log(nums.some((el)=>el>2));
+
+//every 메소드
+// : 모든 요소가 조건을 만족하는지 -> true/false
+console.log(nums.every((el)=>el>2));
+
+//이 두 메소드 역시 -> 반복 횟수가 다름.
+//every 메소드는 조건을 만족하지 않는 요소를 찾는 순간 반복 멈춤.
+//some 메소드는 조건을 만족하는 요소를 찾는 순간 멈춤
+//빈 매열인 경우 -> some은 false, every는 true를 출력
+
+
+//reduce 메소드 
+//재귀함수 만드는 데에 이용되는 듯
+/*nums.reduce((acc,el,i,arr)=>{
+    return nextAccValue;
+},initialAccValue);*/
+
+const sumAll=nums.reduce((acc,el,i)=>{
+    console.log(`${i}번 index의 요소로 재귀함수가 동작 중`);
+    console.log('acc: ',acc); //이전까지의 함수 결과 값
+    console.log('el: ',el); //현재 시행에서의 함수 결과 값
+    console.log('-----------------------');
+    return acc+el; //이전 + 현재 값 더해서 리턴
+},0);
+
+console.log('sumAll: ',sumAll);
+
+//reduce 실습
+
+const data = [ 
+    { company: 'Naber', month: 3 },
+      { company: 'Amajohn', month: 12 },
+      { company: 'Coogle', month: 10 },
+    { company: 'Ittel', month: 6 },
+    { company: 'Sasung', month: 4 },
+    { company: 'CaCao', month: 3 },
+      { company: 'Microhard', month: 17 },
+  ];
+  
+  // 여기에 코드를 작성해 주세요.
+  const totalCareer = data.reduce((acc,{month})=>{
+    return acc+month;
+  },0);
+  
+  //같은 의미
+  const totalCareer = data.reduce((acc, el) => acc + el.month, 0);
+  
+  console.log(`상원이의 경력은 총 ${totalCareer}개월입니다.`);
+  
