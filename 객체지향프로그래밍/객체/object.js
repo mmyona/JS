@@ -126,3 +126,6 @@ class Math{
 console.log(Math.PI);
 console.log(Math.getCircleArea(5));
 console.log(Date.now());
+
+
+
